@@ -97,7 +97,7 @@ export default function App() {
    */
   const createSender = async () => {
     // create a new Keypair
-
+    const keypair = new keypair.generate();
 
     console.log('Sender account: ', senderKeypair!.publicKey.toString());
     console.log('Airdropping 2 SOL to Sender Wallet');
