@@ -106,7 +106,7 @@ export default function App() {
     setSenderKeypair(keypair);
 
     // request airdrop into this new account
-    
+    const airdropSignature = await connection.requestAirdrop(keypair.publicKey, 2*LAMPORTS_PER_SOL)
 
     const latestBlockHash = await connection.getLatestBlockhash();
 
