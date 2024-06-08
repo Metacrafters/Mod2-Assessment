@@ -166,7 +166,7 @@ export default function App() {
     const transaction = new transaction().add(SystemProgram.transfer({fromPubkey: senderKeypair?.publicKey, toPubkey: receiverPublicKey, lamports: 1* LAMPORTS_PER_SOL,}));
 
     // send and confirm the transaction
-    
+    const signature = await sendAndConfirmTransaction(connection, transaction, [senderKeypair]);
 
     console.log("transaction sent and confirmed");
     console.log("Sender Balance: " + await connection.getBalance(senderKeypair!.publicKey) / LAMPORTS_PER_SOL);
