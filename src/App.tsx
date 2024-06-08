@@ -103,7 +103,7 @@ export default function App() {
     console.log('Airdropping 2 SOL to Sender Wallet');
 
     // save this new KeyPair into this state variable
-    setSenderKeypair(/*KeyPair here*/);
+    setSenderKeypair(keypair);
 
     // request airdrop into this new account
     
