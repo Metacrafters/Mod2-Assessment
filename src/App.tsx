@@ -168,6 +168,7 @@ export default function App() {
     // send and confirm the transaction
     const signature = await sendAndConfirmTransaction(connection, transaction, [senderKeypair]);
 
+    console.log("Transaction signature", signature);
     console.log("transaction sent and confirmed");
     console.log("Sender Balance: " + await connection.getBalance(senderKeypair!.publicKey) / LAMPORTS_PER_SOL);
     console.log("Receiver Balance: " + await connection.getBalance(receiverPublicKey!) / LAMPORTS_PER_SOL);
